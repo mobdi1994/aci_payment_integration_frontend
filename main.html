@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ACI Payment Integration</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var wpwlOptions = {
+            locale: "en",
+            maskCvv: true,
+            showCVVHint: true,
+            brandDetection: true,
+            errorMessages: {cardHolderError: "Invalid name on the card, please enter alphatebets only", cardNumberError:" Please enter the correct number from the card", cvvError: "Invalid security code, please enter the correct security code"},
+            onReady: function() {
+            $('.wpwl-label-cardHolder').html('Name on Credit Card');  
+    }
+        }
+    </script>
+    <script src='main.js'></script>
+
+    
+</head>
+<body> 
+    <form action="http://localhost:3000/api/payment/" class="paymentWidgets" data-brands="VISA MASTER PAYPAL"></form>     
+</body>
+</html>

@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-    fetch("http://localhost:3000/api/checkout")
+    fetch("https://tranquil-inlet-59029.herokuapp.com/api/checkout")
     .then((response) => response.json())
     .then(({checkoutId}) => {
     
